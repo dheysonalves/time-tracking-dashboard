@@ -1,3 +1,27 @@
+*,
+**::before,
+**::after {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
 
+body {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  background-color: hsl(226deg, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  vertical-align: baseline;
+  overflow: auto;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
 
 /*# sourceMappingURL=style.css.map */
