@@ -16,8 +16,72 @@ body {
   margin: 0;
 }
 
+.core__main {
+  display: grid;
+  min-height: 100vh;
+  overflow: auto;
+  margin: 0em 0.9em;
+  align-self: center;
+  justify-self: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.card__user {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.4em;
+  background-color: hsl(235deg, 46%, 20%);
+}
+.card__user .card__report {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: hsl(246deg, 80%, 60%);
+  border-radius: 0.4em;
+  padding: 1.5em;
+}
+.card__user .card__report .card__img {
+  max-width: 100%;
+  width: 4em;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.card__user .card__report .card__report__top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1em;
+}
+.card__user .card__report .card__report__top .card__description {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 1rem;
+}
+.card__user .card__report .card__report__top .card__title {
+  margin: 0;
+  color: hsl(236deg, 100%, 87%);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 2.5vw, 1.5rem);
+}
+.card__user .card__actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+.card__user .card__actions__item {
+  color: hsl(236deg, 100%, 87%);
+}
+.card__user .card__actions__item--active {
+  color: white;
+}
+
 .attribution {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
 }
 .attribution a {

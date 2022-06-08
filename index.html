@@ -1,214 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<title>Frontend Mentor | Time tracking dashboard</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./build/style.css" />
+	</head>
 
-  <title>Frontend Mentor | Time tracking dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./build/style.css">
-</head>
+	<body>
+		<main class="core__main">
+			<div class="cards">
+				<div class="card__user">
+					<div class="card__report">
+						<img
+							class="card__img"
+							src="./images/image-jeremy.png"
+							alt="User report image"
+						/>
+						<div class="card__report__top">
+							<span class="card__description"> Report for </span>
+							<h1 class="card__title">Jeremy Robson</h1>
+						</div>
+					</div>
+					<div class="card__actions">
+						<span class="card__actions__item">Daily</span>
+						<span class="card__actions__item">Weekly</span>
+						<span class="card__actions__item">Monthly</span>
+					</div>
+				</div>
+				<div class="card__content">
+					<div class="card__work">
+						<div class="card__head">
+							<div class="card__top">
+								<span class="card__title">Work</span>
+								<img
+									class="card__dots"
+									src="./images/icon-ellipsis.svg"
+									alt="Card dots"
+									srcset=""
+								/>
+							</div>
+							<h2 class="card__current" id="current_work__daily">5hrs</h2>
+							<h2 class="card__current" id="current_work__weekly" hidden>
+								103hrs
+							</h2>
+							<h2 class="card__current" id="current_work__monthly" hidden>
+								142hrs
+							</h2>
+						</div>
+						<div class="card__footer">
+							<span class="card__previous" id="previous_work__daily">
+								Previous - 7hrs
+							</span>
+							<span class="card__previous" id="previous_work__weekly" hidden>
+								Previous - 36hrs
+							</span>
+							<span class="card__previous" id="previous_work__monthly" hidden>
+								Previous - 128hrs
+							</span>
+						</div>
+					</div>
+					<div class="card__play">
+						<div class="card__head">
+							<div class="card__top">
+								<span class="card__title">Work</span>
+								<img
+									class="card__dots"
+									src="./images/icon-ellipsis.svg"
+									alt="Card dots"
+									srcset=""
+								/>
+							</div>
+							<h2 class="card__current" id="current_play__daily">1hr</h2>
+							<h2 class="card__current" id="current_play__weekly">10hrs</h2>
+							<h2 class="card__current" id="current_play__monthly">23hrs</h2>
+						</div>
+						<div class="card__footer">
+							<span class="card__previous" id="previous_play__daily">
+								Previous - 2hrs
+							</span>
+							<span class="card__previous" id="previous_play__weekly">
+								Previous - 8hrs
+							</span>
+							<span class="card__previous" id="previous_play__monthly">
+								Previous - 29hrs
+							</span>
+						</div>
+					</div>
+					<div class="card__study">
+						<div class="card__head">
+							<div class="card__top">
+								<span class="card__title">Work</span>
+								<img
+									class="card__dots"
+									src="./images/icon-ellipsis.svg"
+									alt="Card dots"
+									srcset=""
+								/>
+							</div>
+							<h2 class="card__current" id="current_study__daily">0hrs</h2>
+							<h2 class="card__current" id="current_study__weekly">4hrs</h2>
+							<h2 class="card__current" id="current_study__monthly">13hrs</h2>
+						</div>
+						<div class="card__footer">
+							<span class="card__previous" id="previous_study__daily">
+								Previous - 1hr
+							</span>
+							<span class="card__previous" id="previous_study__weekly">
+								Previous - 7hrs
+							</span>
+							<span class="card__previous" id="previous_study__monthly">
+								Previous - 19hrs
+							</span>
+						</div>
+					</div>
+					<div class="card__exercise">
+						<div class="card__head">
+							<div class="card__top">
+								<span class="card__title">Work</span>
+								<img
+									class="card__dots"
+									src="./images/icon-ellipsis.svg"
+									alt="Card dots"
+									srcset=""
+								/>
+							</div>
+							<h2 class="card__current" id="current_exercise__daily">1hr</h2>
+							<h2 class="card__current" id="current_exercise__weekly">4hrs</h2>
+							<h2 class="card__current" id="current_exercise__monthly">
+								11hrs
+							</h2>
+						</div>
+						<div class="card__footer">
+							<span class="card__previous" id="previous_exercise__daily">
+								Previous - 1hr
+							</span>
+							<span class="card__previous" id="previous_exercise__weekly">
+								Previous - 5hrs
+							</span>
+							<span class="card__previous" id="previous_exercise__monthly">
+								Previous - 18hrs
+							</span>
+						</div>
+					</div>
+					<div class="card__social">
+						<div class="card__head">
+							<div class="card__top">
+								<span class="card__title">Work</span>
+								<img
+									class="card__dots"
+									src="./images/icon-ellipsis.svg"
+									alt="Card dots"
+									srcset=""
+								/>
+							</div>
+							<h2 class="card__current" id="current_social__daily">1hr</h2>
+							<h2 class="card__current" id="current_social__weekly">5hrs</h2>
+							<h2 class="card__current" id="current_social__monthly">21hrs</h2>
+						</div>
+						<div class="card__footer">
+							<span class="card__previous" id="previous_social__daily">
+								Previous - 3hrs
+							</span>
+							<span class="card__previous" id="previous_social__weekly">
+								Previous - 10hrs
+							</span>
+							<span class="card__previous" id="previous_social__monthly">
+								Previous - 23hrs
+							</span>
+						</div>
+					</div>
+					<div class="card__selfcare">
+						<div class="card__head">
+							<div class="card__top">
+								<span class="card__title">Work</span>
+								<img
+									class="card__dots"
+									src="./images/icon-ellipsis.svg"
+									alt="Card dots"
+									srcset=""
+								/>
+							</div>
+							<h2 class="card__current" id="current_selfcare__daily">0hrs</h2>
+							<h2 class="card__current" id="current_selfcare__weekly">2hrs</h2>
+							<h2 class="card__current" id="current_selfcare__monthly">7hrs</h2>
+						</div>
+						<div class="card__footer">
+							<span class="card__previous" id="previous_selfcare__daily">
+								Previous - 1hr
+							</span>
+							<span class="card__previous" id="previous_selfcare__weekly">
+								Previous - 2hrs
+							</span>
+							<span class="card__previous" id="previous_selfcare__monthly">
+								Previous - 11hrs
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-<body>
-  <main>
-    <div class="card__user">
-      <div class="card__report">
-        <img class="card__img" src="./images/image-jeremy.png" alt="User report image" />
-        <span class="card__description">
-          Report for
-        </span>
-        <h1 class="card__title">
-          Jeremy Robson
-        </h1>
-      </div>
-      <div class="card__actions">
-        <span>Daily</span>
-        <span>Weekly</span>
-        <span>Monthly</span>
-      </div>
-    </div>
-    <div class="card__content">
-      <div class="card__work">
-        <div class="card__head">
-          <div class="card__top">
-            <span class="card__title">Work</span>
-            <img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" srcset="" />
-          </div>
-          <h2 class="card__current" id="current_work__daily">
-            5hrs
-          </h2>
-          <h2 class="card__current" id="current_work__weekly" hidden>
-            103hrs
-          </h2>
-          <h2 class="card__current" id="current_work__monthly" hidden>
-            142hrs
-          </h2>
-        </div>
-        <div class="card__footer">
-          <span class="card__previous" id="previous_work__daily">
-            Previous - 7hrs
-          </span>
-          <span class="card__previous" id="previous_work__weekly" hidden>
-            Previous - 36hrs
-          </span>
-          <span class="card__previous" id="previous_work__monthly" hidden>
-            Previous - 128hrs
-          </span>
-        </div>
-      </div>
-      <div class="card__play">
-        <div class="card__head">
-          <div class="card__top">
-            <span class="card__title">Work</span>
-            <img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" srcset="" />
-          </div>
-          <h2 class="card__current" id="current_play__daily">
-            1hr
-          </h2>
-          <h2 class="card__current" id="current_play__weekly">
-            10hrs
-          </h2>
-          <h2 class="card__current" id="current_play__monthly">
-            23hrs
-          </h2>
-        </div>
-        <div class="card__footer">
-          <span class="card__previous" id="previous_play__daily">
-            Previous - 2hrs
-          </span>
-          <span class="card__previous" id="previous_play__weekly">
-            Previous - 8hrs
-          </span>
-          <span class="card__previous" id="previous_play__monthly">
-            Previous - 29hrs
-          </span>
-        </div>
-      </div>
-      <div class="card__study">
-        <div class="card__head">
-          <div class="card__top">
-            <span class="card__title">Work</span>
-            <img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" srcset="" />
-          </div>
-          <h2 class="card__current" id="current_study__daily">
-            0hrs
-          </h2>
-          <h2 class="card__current" id="current_study__weekly">
-            4hrs
-          </h2>
-          <h2 class="card__current" id="current_study__monthly">
-            13hrs
-          </h2>
-        </div>
-        <div class="card__footer">
-          <span class="card__previous" id="previous_study__daily">
-            Previous - 1hr
-          </span>
-          <span class="card__previous" id="previous_study__weekly">
-            Previous - 7hrs
-          </span>
-          <span class="card__previous" id="previous_study__monthly">
-            Previous - 19hrs
-          </span>
-        </div>
-      </div>
-      <div class="card__exercise">
-        <div class="card__head">
-          <div class="card__top">
-            <span class="card__title">Work</span>
-            <img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" srcset="" />
-          </div>
-          <h2 class="card__current" id="current_exercise__daily">
-            1hr
-          </h2>
-          <h2 class="card__current" id="current_exercise__weekly">
-            4hrs
-          </h2>
-          <h2 class="card__current" id="current_exercise__monthly">
-            11hrs
-          </h2>
-        </div>
-        <div class="card__footer">
-          <span class="card__previous" id="previous_exercise__daily">
-            Previous - 1hr
-          </span>
-          <span class="card__previous" id="previous_exercise__weekly">
-            Previous - 5hrs
-          </span>
-          <span class="card__previous" id="previous_exercise__monthly">
-            Previous - 18hrs
-          </span>
-        </div>
-      </div>
-      <div class="card__social">
-        <div class="card__head">
-          <div class="card__top">
-            <span class="card__title">Work</span>
-            <img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" srcset="" />
-          </div>
-          <h2 class="card__current" id="current_social__daily">
-            1hr
-          </h2>
-          <h2 class="card__current" id="current_social__weekly">
-            5hrs
-          </h2>
-          <h2 class="card__current" id="current_social__monthly">
-            21hrs
-          </h2>
-        </div>
-        <div class="card__footer">
-          <span class="card__previous" id="previous_social__daily">
-            Previous - 3hrs
-          </span>
-          <span class="card__previous" id="previous_social__weekly">
-            Previous - 10hrs
-          </span>
-          <span class="card__previous" id="previous_social__monthly">
-            Previous - 23hrs
-          </span>
-        </div>
-      </div>
-        <div class="card__selfcare">
-          <div class="card__head">
-            <div class="card__top">
-              <span class="card__title">Work</span>
-              <img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" srcset="" />
-            </div>
-            <h2 class="card__current" id="current_selfcare__daily">
-              0hrs
-            </h2>
-            <h2 class="card__current" id="current_selfcare__weekly">
-              2hrs
-            </h2>
-            <h2 class="card__current" id="current_selfcare__monthly">
-              7hrs
-            </h2>
-          </div>
-          <div class="card__footer">
-            <span class="card__previous" id="previous_selfcare__daily">
-              Previous - 1hr
-            </span>
-            <span class="card__previous" id="previous_selfcare__weekly">
-              Previous - 2hrs
-            </span>
-            <span class="card__previous" id="previous_selfcare__monthly">
-              Previous - 11hrs
-            </span>
-          </div>
-        </div>
-    </div>
-  </main>
-
-  <div class="attribution">
+		<!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-
+  </div> -->
+	</body>
 </html>

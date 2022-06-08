@@ -22,7 +22,6 @@ $fw-300: 300;
 $fw-400: 400;
 $fw-500: 500;
 
-
 *,
 **::before,
 **::after {
@@ -34,18 +33,91 @@ $fw-500: 500;
 body {
 	font-size: $fs-18;
 	background-color: $very_dark_blue;
-	font-family: 'Rubik', sans-serif;
+	font-family: "Rubik", sans-serif;
 	vertical-align: baseline;
 	overflow: auto;
 	min-height: 100vh;
 	margin: 0;
 }
 
+.core__main {
+	display: grid;
+	min-height: 100vh;
+	overflow: auto;
+	margin: 0em 0.9em;
+	align-self: center;
+	justify-self: center;
+}
+
+.cards {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	// grid-template-columns: .5fr 1fr;
+}
+
+.card__user {
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.4em;
+	background-color: $dark_blue;
+
+	.card__report {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		background-color: $blue;
+		border-radius: 0.4em;
+		padding: 1.5em;
+
+		.card__img {
+			max-width: 100%;
+			width: 4em;
+			border: 3px solid white;
+			border-radius: 50%;
+		}
+
+		.card__report__top {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-left: 1em;
+
+			.card__description {
+				color: $pale_blue;
+				font-size: 1rem;
+			}
+
+			.card__title {
+				margin: 0;
+				color: $pale_blue;
+				font-weight: 300;
+				font-size: clamp(1.6rem, 2.5vw, 1.5rem);
+			}
+		}
+	}
+
+	.card__actions {
+		display: flex;
+		justify-content: space-between;
+		padding: 1.5em;
+
+		&__item {
+			color: $pale_blue;
+
+			&--active {
+				color: white;
+			}
+		}
+	}
+}
+
 .attribution {
-	font-size: 11px;
+	font-size: 12px;
 	text-align: center;
 
 	a {
-			color: hsl(228, 45%, 44%);
-		}
+		color: hsl(228, 45%, 44%);
+	}
 }
