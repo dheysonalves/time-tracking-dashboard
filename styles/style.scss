@@ -1,10 +1,10 @@
 // Primary
 
 $blue: hsl(246, 80%, 60%);
-$light_red: hsl(15, 100%, 70%);
+$light_red_work: hsl(15, 100%, 70%);
 $soft_blue: hsl(195, 74%, 62%);
 $lime_green: hsl(145, 58%, 55%);
-$light_red: hsl(348, 100%, 68%);
+$light_red_study: hsl(348, 100%, 68%);
 $violet: hsl(264, 64%, 52%);
 $soft_organge: hsl(43, 84%, 65%);
 
@@ -44,7 +44,7 @@ body {
 	display: grid;
 	min-height: 100vh;
 	overflow: auto;
-	margin: 0em 0.9em;
+	margin: 4em 1em;
 	align-self: center;
 	justify-self: center;
 }
@@ -61,6 +61,7 @@ body {
 	flex-direction: column;
 	border-radius: 0.4em;
 	background-color: $dark_blue;
+	margin-bottom: 2em;
 
 	.card__report {
 		display: flex;
@@ -108,6 +109,95 @@ body {
 
 			&--active {
 				color: white;
+			}
+		}
+	}
+}
+
+.card__content {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	&__generic {
+		position: relative;
+		border-radius: 2em;
+
+		.card__head {
+			display: flex;
+			justify-content: flex-end;
+			border-top-left-radius: 0.8em;
+			border-top-right-radius: 0.8em;
+			max-height: 50px;
+			overflow: hidden;
+
+			&--light_red {
+				background-color: $light_red_work;
+			}
+
+			&--soft_blue {
+				background-color: $soft_blue;
+			}
+
+			&--light_red_study {
+				background-color: $light_red_study;
+			}
+
+			&--lime_green {
+				background-color: $lime_green;
+			}
+
+			&--violet {
+				background-color: $violet;
+			}
+
+			&--soft_organge {
+				background-color: $soft_organge;
+			}
+
+			&__icon {
+				position: relative;
+				top: -0.5em;
+				width: 79px;
+				height: 79px;
+				margin-right: 1.2em;
+			}
+		}
+
+		.card__footer {
+			background-color: $dark_blue;
+			border-radius: 1em;
+			z-index: 2;
+			position: relative;
+			top: -15px;
+			padding: 2em 1em;
+
+			.card__footer__top {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.card__title {
+					font-size: clamp(1rem, 2.5vw, 2rem);
+					color: white;
+					font-weight: $fw-400;
+				}
+			}
+
+			.card__footer__bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.card__current {
+					margin: 0;
+					color: white;
+					font-weight: 200;
+					padding-top: .2em;
+				}
+				.card__previous {
+					color: white;
+					font-weight: 100;
+				}
 			}
 		}
 	}
