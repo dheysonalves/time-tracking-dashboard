@@ -20,7 +20,7 @@ body {
   display: grid;
   min-height: 100vh;
   overflow: auto;
-  margin: 4em 1em;
+  margin: 4em 1.4em;
   align-self: center;
   justify-self: center;
 }
@@ -88,6 +88,9 @@ body {
 .card__content__generic {
   position: relative;
   border-radius: 2em;
+}
+.card__content__generic:not(:last-child) {
+  margin-bottom: 1em;
 }
 .card__content__generic .card__head {
   display: flex;

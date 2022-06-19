@@ -44,7 +44,7 @@ body {
 	display: grid;
 	min-height: 100vh;
 	overflow: auto;
-	margin: 4em 1em;
+	margin: 4em 1.4em;
 	align-self: center;
 	justify-self: center;
 }
@@ -122,6 +122,10 @@ body {
 		position: relative;
 		border-radius: 2em;
 
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
+
 		.card__head {
 			display: flex;
 			justify-content: flex-end;
@@ -192,7 +196,7 @@ body {
 					margin: 0;
 					color: white;
 					font-weight: 200;
-					padding-top: .2em;
+					padding-top: 0.2em;
 				}
 				.card__previous {
 					color: white;
