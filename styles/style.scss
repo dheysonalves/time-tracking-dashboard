@@ -22,6 +22,8 @@ $fw-300: 300;
 $fw-400: 400;
 $fw-500: 500;
 
+$desktop: 1270px;
+
 *,
 **::before,
 **::after {
@@ -201,6 +203,55 @@ body {
 				.card__previous {
 					color: white;
 					font-weight: 100;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop) {
+	.cards {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 0.5fr 1fr;
+		align-self: center;
+		gap: 1em;
+
+		.card__user {
+			margin: 0;
+			max-width: 100%;
+			overflow: auto;
+
+			.card__report {
+				flex-direction: column;
+				align-items: flex-start;
+
+				.card__report__top {
+					margin: 0;
+					padding-top: 1em;
+				}
+			}
+
+			.card__actions {
+				flex-direction: column;
+				height: 100%;
+			}
+		}
+
+		.card__content {
+			grid-template-columns: repeat(3, 1fr);
+
+			.card__content__generic {
+				margin: 0.2em;
+			}
+
+			.card__footer {
+				flex-direction: row;
+				justify-content: space-between;
+
+				.card__footer__bottom {
+					flex-direction: column;
+					align-items: flex-start;
 				}
 			}
 		}
