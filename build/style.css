@@ -159,6 +159,46 @@ body {
   font-weight: 100;
 }
 
+@media (min-width: 1270px) {
+  .cards {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.5fr 1fr;
+    align-self: center;
+    gap: 1em;
+  }
+  .cards .card__user {
+    margin: 0;
+    max-width: 100%;
+    overflow: auto;
+  }
+  .cards .card__user .card__report {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cards .card__user .card__report .card__report__top {
+    margin: 0;
+    padding-top: 1em;
+  }
+  .cards .card__user .card__actions {
+    flex-direction: column;
+    height: 100%;
+  }
+  .cards .card__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cards .card__content .card__content__generic {
+    margin: 0.2em;
+  }
+  .cards .card__content .card__footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .cards .card__content .card__footer .card__footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .attribution {
   font-size: 12px;
   text-align: center;
