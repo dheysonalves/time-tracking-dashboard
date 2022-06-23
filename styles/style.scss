@@ -108,8 +108,17 @@ body {
 
 		&__item {
 			color: $pale_blue;
+			cursor: pointer;
 
 			&--active {
+				color: white;
+			}
+
+			&:hover {
+				color: white;
+			}
+
+			&:active {
 				color: white;
 			}
 		}
@@ -215,7 +224,9 @@ body {
 		grid-template-rows: 1fr;
 		grid-template-columns: 0.5fr 1fr;
 		align-self: center;
+		justify-self: center;
 		gap: 1em;
+		width: 86%;
 
 		.card__user {
 			margin: 0;
@@ -229,12 +240,24 @@ body {
 				.card__report__top {
 					margin: 0;
 					padding-top: 1em;
+
+					.card__title {
+						font-size: 2.8rem;
+						font-weight: 400;
+					}
+
+					.card__description {
+						font-size: 1.2rem;
+						padding-bottom: 0.4em;
+					}
 				}
 			}
 
 			.card__actions {
 				flex-direction: column;
+				justify-content: space-evenly;
 				height: 100%;
+				padding: 1em 1.5em;
 			}
 		}
 
@@ -248,10 +271,22 @@ body {
 			.card__footer {
 				flex-direction: row;
 				justify-content: space-between;
+				padding: 1em;
+				border-radius: .5em;
+
+				.card__footer__top {
+					.card__title {
+						font-size: 1.4rem;
+					}
+				}
 
 				.card__footer__bottom {
 					flex-direction: column;
 					align-items: flex-start;
+
+					.card__previous {
+						font-size: 1.2rem;
+					}
 				}
 			}
 		}
