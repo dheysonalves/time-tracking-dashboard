@@ -222,28 +222,34 @@ body {
 	.cards {
 		display: grid;
 		grid-template-rows: 1fr;
-		grid-template-columns: 0.5fr 1fr;
+		grid-template-columns: .5fr 1fr;
 		align-self: center;
 		justify-self: center;
-		gap: 1em;
+		gap: .5em;
 		width: 86%;
 
 		.card__user {
 			margin: 0;
+			width: 95%;
 			max-width: 100%;
 			overflow: auto;
 
 			.card__report {
 				flex-direction: column;
 				align-items: flex-start;
+				padding: 1.5em 1.5em 3em 1.5em;
+
+				.card__img {
+					border: 5px solid white;
+				}
 
 				.card__report__top {
 					margin: 0;
-					padding-top: 1em;
+					padding-top: 1.5em;
 
 					.card__title {
-						font-size: 2.8rem;
-						font-weight: 400;
+						font-size: 3.5rem;
+						font-weight: 300;
 					}
 
 					.card__description {
@@ -258,11 +264,17 @@ body {
 				justify-content: space-evenly;
 				height: 100%;
 				padding: 1em 1.5em;
+
+				&__item {
+					padding-bottom: .8em;
+				}
 			}
 		}
 
 		.card__content {
 			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: .3fr .3fr;
+			gap: .5em;
 
 			.card__content__generic {
 				margin: 0.2em;
@@ -276,16 +288,19 @@ body {
 
 				.card__footer__top {
 					.card__title {
-						font-size: 1.4rem;
+						font-size: 1rem;
 					}
 				}
 
 				.card__footer__bottom {
 					flex-direction: column;
 					align-items: flex-start;
+					padding-top: .5em;
 
 					.card__previous {
-						font-size: 1.2rem;
+						font-size: 1rem;
+						color: $pale_blue;
+						padding-top: .5em;
 					}
 				}
 			}
