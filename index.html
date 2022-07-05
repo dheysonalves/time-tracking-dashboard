@@ -27,9 +27,15 @@
 					</div>
 				</div>
 				<div class="card__actions">
-					<span class="card__actions__item">Daily</span>
-					<span class="card__actions__item">Weekly</span>
-					<span class="card__actions__item">Monthly</span>
+					<button class="card__actions__button" type="button" id="daily_button">
+						<span class="card__actions__item">Daily</span>
+					</button>
+					<button class="card__actions__button" type="button" id="weekly_button">
+						<span class="card__actions__item">Weekly</span>
+					</button>
+					<button class="card__actions__button" type="button" id="monthly_button">
+						<span class="card__actions__item">Monthly</span>
+					</button>
 				</div>
 			</div>
 			<div class="card__content">
@@ -40,7 +46,7 @@
 					<div class="card__footer">
 						<div class="card__footer__top">
 							<span class="card__title">Work</span>
-							<img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" srcset="" />
+							<img class="card__dots" src="./images/icon-ellipsis.svg" alt="Card dots" />
 						</div>
 						<div class="card__footer__bottom">
 							<h2 class="card__current" id="current_work__daily">32hrs</h2>
@@ -210,6 +216,19 @@
 			</div>
 		</div>
 	</main>
+	<script>
+		const $daily_button = document.querySelector('#daily_button');
+		const $weekly_button = document.querySelector('#weekly_button');
+		const $monthly_button = document.querySelector('#monthly_button');
+
+		function onDailyClick () {
+
+		}
+
+		$daily_button.addEventListener("click", () => {
+			console.log('click daily');
+		})
+	</script>
 
 	<!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

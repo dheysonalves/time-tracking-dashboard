@@ -106,6 +106,18 @@ body {
 		justify-content: space-between;
 		padding: 1.5em;
 
+		&__button {
+			background: none;
+			color: inherit;
+			border: none;
+			padding: 0;
+			font: inherit;
+			cursor: pointer;
+			outline: inherit;
+			padding-bottom: 0.8em;
+			text-align: start;
+		}
+
 		&__item {
 			color: $pale_blue;
 			cursor: pointer;
@@ -219,13 +231,17 @@ body {
 }
 
 @media (min-width: $desktop) {
+	.core__main {
+		margin: 0;
+	}
+
 	.cards {
 		display: grid;
 		grid-template-rows: 1fr;
-		grid-template-columns: .5fr 1fr;
+		grid-template-columns: 0.5fr 1fr;
 		align-self: center;
 		justify-self: center;
-		gap: .5em;
+		gap: 0.5em;
 		width: 86%;
 
 		.card__user {
@@ -266,15 +282,15 @@ body {
 				padding: 1em 1.5em;
 
 				&__item {
-					padding-bottom: .8em;
+					padding-bottom: 0.8em;
 				}
 			}
 		}
 
 		.card__content {
 			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: .3fr .3fr;
-			gap: .5em;
+			grid-template-rows: 0.3fr 0.3fr;
+			gap: 0.5em;
 
 			.card__content__generic {
 				margin: 0.2em;
@@ -284,7 +300,7 @@ body {
 				flex-direction: row;
 				justify-content: space-between;
 				padding: 1em;
-				border-radius: .5em;
+				border-radius: 0.5em;
 
 				.card__footer__top {
 					.card__title {
@@ -295,12 +311,12 @@ body {
 				.card__footer__bottom {
 					flex-direction: column;
 					align-items: flex-start;
-					padding-top: .5em;
+					padding-top: 0.5em;
 
 					.card__previous {
 						font-size: 1rem;
 						color: $pale_blue;
-						padding-top: .5em;
+						padding-top: 0.5em;
 					}
 				}
 			}
