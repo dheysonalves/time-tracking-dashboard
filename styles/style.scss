@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Primary
 
 $blue: hsl(246, 80%, 60%);
@@ -30,6 +32,10 @@ $desktop: 1270px;
 	box-sizing: border-box;
 	padding: 0;
 	border: 0;
+}
+
+@function pxToRem($px, $base: 16) {
+	@return math.div($px, $base) + rem;
 }
 
 body {
@@ -89,7 +95,7 @@ body {
 
 			.card__description {
 				color: $pale_blue;
-				font-size: 1rem;
+				font-size: pxToRem(16);
 			}
 
 			.card__title {
